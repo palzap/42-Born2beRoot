@@ -2,31 +2,31 @@
 
 Introduction to Virtual Machines and System Administration
 
-#### Started:
+**Started:**  
 13/12/2022
 
-#### First submission:
+**First submission:**  
 22/12/2022
 
-#### Score:
+**Score:**  
 xxx%
 
 ## Project Overview
-### What is a virtual machine?
+#### What is a virtual machine?
 
 A Virtual Machine (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.  Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all running on the same host. This means that, for example, a virtual MacOS virtual machine can run on a physical PC. 
 
-### How does a virtual machine work?
+#### How does a virtual machine work?
 
 VMs are made possible through virtualization technology. Virtualization uses software to simulate virtual hardware that allows multiple VMs to run on a single machine. The physical machine is known as the host while the VMs running on it are called guests.
 
-### Why Debian?
+#### Why Debian?
 
 It is the OS recommended by the subject for beginners to system administration, which is my case. From what I gathered, Debian is easier to install and it's more similar to Ubuntu in terms of commands used.
 
 Most users appreciate the stability, and the smooth upgrade processes of both packages and the entire distribution. Debian is also widely used by software and hardware developers because it runs on numerous architectures and devices, offers a public bug tracker and other tools for developers.
 
-### What is apt and aptitude?
+#### What is apt and aptitude?
 
 APT is the abbreviation for Advanced Package Tool. What makes this program “advanced” is its approach to packages. It doesn't simply evaluate them individually, but it considers them as a whole and produces the best possible combination of packages depending on what is available and compatible according to dependencies.
 
@@ -34,18 +34,14 @@ aptitude is a feature full package manager for Debian GNU/Linux systems, based o
 
 To sum everything up, aptitude incorporates all apt features and makes it more user friendly.
 
-### What is AppArmor?
+#### What is AppArmor?
 
 AppArmor is a Mandatory Access Control (MAC) system built on Linux's LSM (Linux Security Modules) interface. In practice, the kernel queries AppArmor before each system call to know whether the process is authorized to do the given operation. Through this mechanism, AppArmor confines programs to a limited set of resources. AppArmor applies a set of rules (known as “profile”) on each program. The profile applied by the kernel depends on the installation path of the program being executed.
 
-### What is SSH?
+#### What is SSH?
 
-The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution.
-
-### Monitoring log script working?
-
-Hope so!
-
+The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution.  
+  
 ## Setting up the Virtual Machine
 We use Oracle VM Virtual Box Manager to create our Virtual Machine (VM).  
 1. Open Virtual Box and press New  
@@ -114,11 +110,11 @@ We use Oracle VM Virtual Box Manager to create our Virtual Machine (VM).
 ![Install GRUB boot loader](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/052.png?raw=true)
 21. Installation will now complete and you can now boot into your newly installed server.  
 
-## Installing and configuring main services
+## Installing and configuring main services  
 Login as root user
 ```
 su
-````
+```
 ### SSH - Secure Shell Protocol 
 ```
 apt install ssh
