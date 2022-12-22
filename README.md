@@ -49,71 +49,71 @@ Hope so!
 
 ## Setting up the Virtual Machine
 We use Oracle VM Virtual Box Manager to create our Virtual Machine (VM).  
-1. Open Virtual Box and press New
-![Open Virtual Box and press New](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/01.png?raw=true)
-2. Fill in all information
-![Fill in all information](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/02.png?raw=true)
-3. Set RAM size
-![Set RAM size](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/03.png?raw=true)
-4. Create Hard Disk now
-![Create Hard Disk now](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/04.png?raw=true)
-5. Create VDI
-![Create VDI](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/05.png?raw=true)
-6. Dinamically allocated
-![Dinamcally allocated](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/06.png?raw=true)
-7. Set total disk size
-![Set total disk size](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/07.png?raw=true)
-8. Go to VM settings
-![Go to VM settings](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/08.png?raw=true)
-9. Set Network Adapter settings now
-![Set Network Adapter settings now](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/09.png?raw=true)
-10. Start VM
-![Start VM](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/10.png?raw=true)
-11. Choose the Debian ISO. Download latest release from [here](https://www.debian.org/download)
-![Choose ISO](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/11.png?raw=true)
-
+1. Open Virtual Box and press New  
+![Open Virtual Box and press New](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/01.png?raw=true)  
+2. Fill in all information  
+![Fill in all information](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/02.png?raw=true)  
+3. Set RAM size  
+![Set RAM size](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/03.png?raw=true)  
+4. Create Hard Disk now  
+![Create Hard Disk now](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/04.png?raw=true)  
+5. Create VDI  
+![Create VDI](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/05.png?raw=true)  
+6. Dinamically allocated  
+![Dinamcally allocated](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/06.png?raw=true)  
+7. Set total disk size  
+![Set total disk size](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/07.png?raw=true)  
+8. Go to VM settings  
+![Go to VM settings](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/08.png?raw=true)  
+9. Set Network Adapter settings now  
+![Set Network Adapter settings now](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/09.png?raw=true)  
+10. Start VM  
+![Start VM](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/10.png?raw=true)  
+11. Choose the Debian ISO. Download latest release from [here](https://www.debian.org/download)  
+![Choose ISO](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/11.png?raw=true)  
+  
 ## Partitioning and OS installation
-1. Select install
-![Select install](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/001.png?raw=true)
-2. Set hostname, it should be youruser42
-![Set hostname](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/002.png?raw=true)
-3. Set password
-![Set password](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/004.png?raw=true)
-4. Create a new user
-![Create a new user](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/006.png?raw=true)
-5. Choose Manual Partitioning
-![Choose Manual Partitioning](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/007.png?raw=true)
-6. Select Disk
-![Select Disk](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/008.png?raw=true)
-7. Complete the process and then select Create a new Partition
-![Create a new Partition](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/011.png?raw=true)
-8. Set the size in Megabytes for the /boot Partition. The `lsblk` command shows information in Mebibytes and Gibibytes [read more here](https://www.linuxscrew.com/kibibytes-mebibytes-gibibytes-tebibytes). So while creating partitions here, and to ensure that the sizes match the subject, just Google `mebibytes to megabytes` and use the converter to get the correct value of megabytes/gigabytes to input.
-![Set size for /boot Partition](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/012.png?raw=true)
-9. Set it as Primary and Beggining. Then set the Mount point to /boot
-![Set Mount point to /boot](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/017.png?raw=true)
-10. Configure encrypted volumes
-![Configure encrypted volumes](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/018.png?raw=true)
-11. Select the device to be encrypted
-![Select device to be encrypted](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/021.png?raw=true)
-12. Finish encryption and set a password for your encrypted volume. Then Configure the Logical Volume Manager (LVM)
-![Configure LVM](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/028.png?raw=true)
-13. Create a new LVM group and name it accordingly
-![Create LVM group](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/031.png?raw=true)
-14. Use the newly encrypted volume and start creating the logical volumes
-![Create logical volume](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/033.png?raw=true)
-15. Create all volumes according to the subject, in my case I'm going for the Bonus part.
-![Set volume name](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/035.png?raw=true)
-16. Set volume size
-![Set volume size](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/036.png?raw=true)
-17. After creating all volumes, enable and mount each one accordingly
-![Mount volumes](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/038.png?raw=true)
-18. home partition example
-![home partition example](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/043.png?raw=true)
-19. Complete the process and proceed with the installation. Make sure to install only the minimum service.
-![Minimum service](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/051.png?raw=true)
-20. Install GRUB boot loader on the primary device
-![Install GRUB boot loader](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/052.png?raw=true)
-21. Installation will now complete and you can now boot into your newly installed server.
+1. Select install  
+![Select install](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/001.png?raw=true)  
+2. Set hostname, it should be youruser42  
+![Set hostname](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/002.png?raw=true)  
+3. Set password  
+![Set password](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/004.png?raw=true)  
+4. Create a new user  
+![Create a new user](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/006.png?raw=true)  
+5. Choose Manual Partitioning  
+![Choose Manual Partitioning](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/007.png?raw=true)  
+6. Select Disk  
+![Select Disk](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/008.png?raw=true)  
+7. Complete the process and then select Create a new Partition  
+![Create a new Partition](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/011.png?raw=true)  
+8. Set the size in Megabytes for the /boot Partition. The `lsblk` command shows information in Mebibytes and Gibibytes [read more here](https://www.linuxscrew.com/kibibytes-mebibytes-gibibytes-tebibytes). So while creating partitions here, and to ensure that the sizes match the subject, just Google `mebibytes to megabytes` and use the converter to get the correct value of megabytes/gigabytes to input.  
+![Set size for /boot Partition](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/012.png?raw=true)  
+9. Set it as Primary and Beggining. Then set the Mount point to /boot  
+![Set Mount point to /boot](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/017.png?raw=true)  
+10. Configure encrypted volumes  
+![Configure encrypted volumes](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/018.png?raw=true)  
+11. Select the device to be encrypted  
+![Select device to be encrypted](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/021.png?raw=true)  
+12. Finish encryption and set a password for your encrypted volume. Then Configure the Logical Volume Manager (LVM)  
+![Configure LVM](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/028.png?raw=true)  
+13. Create a new LVM group and name it accordingly  
+![Create LVM group](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/031.png?raw=true)  
+14. Use the newly encrypted volume and start creating the logical volumes  
+![Create logical volume](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/033.png?raw=true)  
+15. Create all volumes according to the subject, in my case I'm going for the Bonus part.  
+![Set volume name](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/035.png?raw=true)  
+16. Set volume size  
+![Set volume size](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/036.png?raw=true)  
+17. After creating all volumes, enable and mount each one accordingly  
+![Mount volumes](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/038.png?raw=true)  
+18. home partition example  
+![home partition example](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/043.png?raw=true)  
+19. Complete the process and proceed with the installation. Make sure to install only the minimum service.  
+![Minimum service](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/051.png?raw=true)  
+20. Install GRUB boot loader on the primary device  
+![Install GRUB boot loader](https://github.com/palzap/42-Born2beRoot/blob/master/images/installation/052.png?raw=true)  
+21. Installation will now complete and you can now boot into your newly installed server.  
 
 ## Installing and configuring main services
 Login as root user
