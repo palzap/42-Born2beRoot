@@ -56,7 +56,7 @@ We use Oracle VM Virtual Box Manager to create our Virtual Machine (VM).
 ![Set RAM size](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/03.png?raw=true)
 4. Create Hard Disk now
 ![Create Hard Disk now](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/04.png?raw=true)
-5. Create VDI
+5. Create VDI  
 ![Create VDI](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/05.png?raw=true)
 6. Dinamically allocated
 ![Dinamcally allocated](https://github.com/palzap/42-Born2beRoot/blob/master/images/setvm/06.png?raw=true)
