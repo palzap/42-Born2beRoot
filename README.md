@@ -3,13 +3,9 @@
 
 Introduction to Virtual Machines and System Administration
 
-#### Started:
-13/12/2022
 
 #### First submission:
-22/12/2022
-
-#### Score:
+22/12/2022  
 125%
 
 ## Project Overview
